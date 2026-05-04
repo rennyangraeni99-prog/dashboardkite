@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard KITE Pembebasan dan Pengembalian</title>
+    <title>KITE Dashboard - Google Sheets</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0/dist/chartjs-plugin-datalabels.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -141,7 +141,8 @@
 
 <script>
     // ================= ⚠️ GANTI URL INI DENGAN WEB APP ANDA ⚠️ =================
-    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxr_0BftDxOvKXFrKDmi14NhZscKEXbDrjYFnj72G1IJ2elgecW758jUbRsiWEZ7fGa/exec";
+    // Contoh: const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwLsQSrzns9ms_BNaDWaAlvetemPjxvkaOZzzc7a1o/dev";
+    const WEB_APP_URL = "https://script.google.com/macros/s/YOUR_ACTUAL_ID/exec";
     const ADMIN_PASSWORD = "rahasia123";
     
     let allData = [];
@@ -168,6 +169,7 @@
             const response = await fetch(`${WEB_APP_URL}?${params.toString()}`, { method: "GET", mode: "cors" });
             return await response.json();
         } catch (error) {
+            console.error("Fetch error:", error);
             return { success: false, message: error.message };
         }
     }
