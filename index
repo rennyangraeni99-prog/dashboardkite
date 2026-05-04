@@ -100,7 +100,7 @@
 
 <script>
     // ================= ⚠️ GANTI URL INI DENGAN WEB APP ANDA ⚠️ =================
-    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbz_1DEc4DHoFm7k3xPx5G0iRhb4cLdN7wQxYzU/exec";
+    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbyGiFI2fL0-4bo9Afjm_FFpNyPfs9PGTXqOan9lvGBBIQ9V-XhC6sL89DnrKD9JaLyI/exec";
     const ADMIN_PASSWORD = "admin123";
     
     let allData = [];
